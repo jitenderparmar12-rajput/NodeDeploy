@@ -1,0 +1,21 @@
+{
+  "name": "nodedeploy",
+  "version": "1.0.0",
+  "description": "Node.js DevOps Project",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "nodejs",
+    "devops",
+    "docker",
+    "jenkins",
+    "kubernetes"
+  ],
+  "author": "Jitender Parmar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
