@@ -7,7 +7,8 @@ pipeline {
         DOCKER = "C:\\Users\\JITENDER PARMAR\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe"
 
         KUBECTL = "C:\\Users\\JITENDER PARMAR\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\kubectl.exe"
-    }
+        KUBECONFIG = "C:\\Users\\JITENDER PARMAR\\.kube\\config"
+         }
 
     stages {
 
