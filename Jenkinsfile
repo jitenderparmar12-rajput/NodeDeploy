@@ -39,18 +39,18 @@ pipeline {
         }
 
         stage('Test Application') {
-            steps {
-                bat '"%DOCKER%" rm -f nodedeploy-test 2>nul || exit /b 0'
+    steps {
+        bat '"%DOCKER%" rm -f nodedeploy-test 2>nul || exit /b 0'
 
-                bat '"%DOCKER%" run -d -p 3002:3000 --name nodedeploy-test %IMAGE_NAME%:%BUILD_NUMBER%'
+        bat '"%DOCKER%" run -d -p 3002:3000 --name nodedeploy-test %IMAGE_NAME%:%BUILD_NUMBER%'
 
-                bat 'timeout /t 5 /nobreak'
+        bat 'powershell -Command "Start-Sleep -Seconds 5"'
 
-                bat 'curl.exe http://localhost:3002/health'
+        bat 'curl.exe http://localhost:3002/health'
 
-                bat '"%DOCKER%" rm -f nodedeploy-test'
-            }
-        }
+        bat '"%DOCKER%" rm -f nodedeploy-test'
+    }
+}
 
         stage('DockerHub Login') {
             steps {
